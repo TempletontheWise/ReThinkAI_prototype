@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+}
+
+header #nav-container {
+  padding: 0 100px 0 30px;
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(227, 227, 227, 0.427);
+}
+
+header #nav-container #nav-logo {
+  display: block;
+  margin: auto 0;
+}
+
+header #nav-container #nav-logo img {
+  height: 30px;
+}
+
+header #nav-container #nav-wrapper {
+  margin: auto 0 auto auto;
+}
+
+header #nav-container #nav-wrapper nav ul {
+  list-style: none;
+  line-height: 1;
+}
+
+header #nav-container #nav-wrapper nav ul li {
+  display: inline-block;
+  font-variant: small-caps;
+}
+
+header #nav-container #nav-wrapper nav ul li:not(:last-child) {
+  margin-right: 25px;
+}
+
+
+header #nav-container #nav-wrapper nav ul li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+header #nav-container #nav-wrapper nav ul li a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  -webkit-transition: width 0s ease, background .5s ease;
+  transition: width 0s ease, background .5s ease;
+}
+
+header #nav-container #nav-wrapper nav ul li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  background: hsl(179, 100%, 50%);
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+header #nav-container #nav-wrapper nav ul li a:hover:before,
+header #nav-container #nav-wrapper nav ul li a.active:before {
+  width: 100%;
+  background: hsl(179, 100%, 50%);
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+header #nav-container #nav-wrapper nav ul li a:hover:after,
+header #nav-container #nav-wrapper nav ul li a.active:after {
+  width: 100%;
+  background: transparent;
+  -webkit-transition: all 0s ease;
+  transition: all 0s ease;
+}
+
+header #nav-container.fixed {
+  box-shadow: 5px 8.66px 30px 0 rgba(31, 35, 37, 0.078);
+  background-color: white;
+  position: fixed;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  top: -90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+header #nav-container.fixed #nav-wrapper nav a {
+  color: #000;
+  font-weight: 400;
+}
+
+
+ #content { 
+  overflow: hidden;
+}
+
+#content #section-canvas {
+  margin-bottom: 10000px;
+}
+
+
+#content #section-canvas canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-aspect-ratio: 16 / 9) {
+  #content #section-canvas canvas {
+    position: fixed;
+    width: auto;
+    height: 100%;
+  }
+}
+
+#content #section-wipes {
+  width: 100%;
+  height: 100%;
+}
+      #content #section-wipes .panel .panel-inner, #content #section-wipes footer .panel-inner {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        padding-top: 90px;
+        margin-left: 20%;
+        margin-right: 70px; }
+        #content #section-wipes .panel .panel-inner h2, #content #section-wipes footer .panel-inner h2 {
+          width: 100%;
+          text-align: center;
+          font-size: 100 px;
+          font-family: 'Inter', sans-serif; }
+
+#content #section-wipes .panel,
+#content #section-wipes footer {
+  height: 100vh;
+  position: relative;
+  margin-bottom: 600px;
+}
+
+
+
+ #content footer {
+    background-color: #CDCDCD; }
+
+
+/* Begin Card Styling for Industries section */
+* {
+  box-sizing: border-box;
+}
+
+section #sectionIndustries html
+body {
+  width: 100%;
+  height: 100%;
+}
+
+section #sectionIndustries body {
+  padding: 5rem 0;
+  background: #f9f9fb;
+}
+
+.card {
+  width: 300px;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover, .card.hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.card:hover .card-content, .card.hover .card-content {
+  box-shadow: inset 0 3px 0 0 rgb(0, 251, 255);
+  border-color: hsl(181, 100%, 50%);
+}
+.card:hover .card-img .overlay, .card.hover .card-img .overlay {
+  background-color: rgba(25, 29, 38, 0.85);
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+.card-img {
+  position: relative;
+  height: 224px;
+  width: 100%;
+  background-color: #fff;
+  transition: opacity 0.2s ease;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-img .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+}
+.card-img .overlay .overlay-content {
+  line-height: 224px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.card-img .overlay .overlay-content a {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  padding: 0 2rem;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.card-img .overlay .overlay-content a:hover, .card-img .overlay .overlay-content a.hover {
+  background: rgb(76, 0, 182);
+  border-color: rgb(0, 234, 250);
+}
+.card-content {
+  width: 100%;
+  min-height: 104px;
+  background-color: #fff;
+  border-top: 1px solid #e9e9eb;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+.card-content a {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: #222029;
+}
+.card-content h3,
+.card-content a h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: #785FFF
+}
+
+.card-content p,
+.card-content a p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(32, 41, 28, 0.8);
+}
